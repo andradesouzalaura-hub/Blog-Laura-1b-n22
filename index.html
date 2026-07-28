@@ -245,6 +245,25 @@ Fotos, viagens e momentos que quero guardar.
 
 </footer>
 
+    <script>
+
+function curtir(botao){
+
+    let contador = botao.nextElementSibling.querySelector("span");
+
+    let numero = Number(contador.innerHTML);
+
+    numero++;
+
+    contador.innerHTML = numero;
+
+    botao.innerHTML = "💖 Curtido";
+
+    botao.disabled = true;
+
+}
+
+</script>
 
 
 </body>
