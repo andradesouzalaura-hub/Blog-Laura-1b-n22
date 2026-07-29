@@ -7,8 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Laura's Diary 🎀</title>
+button{
 
-    <style>
+    background-color:#ff8fb7;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:25px;
+    cursor:pointer;
+    margin-top:10px;
+    font-weight:bold;
+    font-size:15px;
+
+}
+
+button:hover{
+
+    background-color:#ff6ea1;
+
+}
+
+button:disabled{
+
+    background-color:#f5b6cb;
+    cursor:default;
+
+}
+    
 
         body {
             margin: 0;
@@ -190,7 +215,9 @@ Looks, tendências e inspirações estilo Pinterest.
 <p>
 Skincare, maquiagem e meus produtos favoritos.
 </p>
-
+<button onclick="curtir(this)">🤍 Curtir</button>
+<p><span>0</span> curtidas</p>
+    
 </div>
 
 
@@ -208,7 +235,9 @@ Skincare, maquiagem e meus produtos favoritos.
 <p>
 Minha rotina, estudos, organização e momentos especiais.
 </p>
-
+<button onclick="curtir(this)">🤍 Curtir</button>
+<p><span>0</span> curtidas</p>
+    
 </div>
 
 
@@ -227,7 +256,8 @@ Minha rotina, estudos, organização e momentos especiais.
 Fotos, viagens e momentos que quero guardar.
 </p>
 
-
+<button onclick="curtir(this)">🤍 Curtir</button>
+<p><span>0</span> curtidas</p>
 </div>
 
 
@@ -265,7 +295,44 @@ function curtir(botao){
 
 </script>
 
+<script>
 
+function curtir(botao){
+
+    let contador = botao.nextElementSibling.querySelector("span");
+
+    let numero = Number(contador.innerHTML);
+
+    numero++;
+
+    contador.innerHTML = numero;
+
+    botao.innerHTML = "💖 Curtido";
+
+    botao.disabled = true;
+
+}
+
+</script>
+    <script>
+
+function curtir(botao){
+
+    let contador = botao.nextElementSibling.querySelector("span");
+
+    let numero = Number(contador.innerHTML);
+
+    numero++;
+
+    contador.innerHTML = numero;
+
+    botao.innerHTML = "💖 Curtido";
+
+    botao.disabled = true;
+
+}
+
+</script>
 </body>
 
 </html>
